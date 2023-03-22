@@ -6,6 +6,7 @@
   <ng-container style="margin: 0.5%;">
     <mat-card *ngFor="let comment of data.element  " class="example-card card">
       <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{comment.name | uppercase}}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
@@ -13,6 +14,7 @@
           {{comment.body}}
         </p>
       </mat-card-content>
+      <i  style="margin: 0.5%;" class="material-icons red">favorite</i>
     </mat-card>
   </ng-container>
 </div>
