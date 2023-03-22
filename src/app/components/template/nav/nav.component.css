@@ -1,16 +1,6 @@
-.sidenav{
-  background-color: #3f51b5;
-  width: 150px;
+mat-tab-group {
+  padding-top: 40px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-
-.list span{
-  color: #ffff;
-}
-.list:hover{
-  background-color: #1a33c1;
-}
-.sidenav i {
-  padding-right: 10px;
-  color: #ffff;
-}

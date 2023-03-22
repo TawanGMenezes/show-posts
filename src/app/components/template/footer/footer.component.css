@@ -6,6 +6,10 @@
   font-weight: 300;
   position: fixed;
   bottom: 0;
+  background-color: rgba(255, 255, 255,0.2);
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+  box-shadow: 0px 5px 8px 5px #ebedf7;
 
 }
 

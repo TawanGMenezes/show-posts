@@ -9,11 +9,14 @@ import { Component, OnInit,Inject } from '@angular/core';
   styleUrls: ['./comments-detail.component.css']
 })
 export class CommentsDetailComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { element: Comments [] }){}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { element: Comments [] },
+  public dialog: MatDialogRef<CommentsDetailComponent>){}
 
   ngOnInit(): void {
 
   }
 
-
+  closeDialog(){
+    this.dialog.close()
+  }
 }
