@@ -2,8 +2,7 @@
   <ng-container style="margin: 0.5%;">
     <mat-card *ngFor="let post of posts" class="example-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-title>{{post.title | uppercase}}</mat-card-title>
         <mat-card-subtitle>Post {{post.id}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
@@ -12,7 +11,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary">Coments</button>
+        <button mat-raised-button color="primary" (click)="listPostDetail(post.id)">Coments</button>
       </mat-card-actions>
     </mat-card>
   </ng-container>

@@ -1,8 +1,10 @@
+import { CommentsDetailComponent } from './comments-detail/comments-detail.component';
 import { Comments } from './../../interfaces/comments';
 import { UserService } from './../../services/user.service';
 import { Post } from './../../interfaces/post';
 import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-card-post',
@@ -16,7 +18,8 @@ export class CardPostComponent implements OnInit{
 
   constructor(
     public postService: PostService,
-    public userService: UserService
+    public userService: UserService,
+    public dialog: MatDialog
   ){
 
   }
@@ -34,6 +37,19 @@ export class CardPostComponent implements OnInit{
   listPostDetail(id: number){
     this.postService.showPostsComments(id).subscribe(data=>{
       this.postComments = data
+      this.showComments(this.postComments)
+    })
+  }
+
+  showComments(element : Comments []): void{
+    const dialogRef = this.dialog.open(CommentsDetailComponent, {
+      width: '80%',
+      data:{element}
+    });
+    dialogRef.afterClosed().subscribe(result=>{
+
     })
   }
 }
+
+

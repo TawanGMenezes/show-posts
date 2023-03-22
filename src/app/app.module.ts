@@ -22,7 +22,8 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { CardPostComponent } from './components/card-post/card-post.component';
 import { CardUserComponent } from './components/card-user/card-user.component';
-import { UserDetailComponent } from './components/card-user/user-detail/user-detail.component'
+import { UserDetailComponent } from './components/card-user/user-detail/user-detail.component';
+import { CommentsDetailComponent } from './components/card-post/comments-detail/comments-detail.component'
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { UserDetailComponent } from './components/card-user/user-detail/user-det
     NavComponent,
     CardPostComponent,
     CardUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    CommentsDetailComponent
   ],
   imports: [
     BrowserModule,
