@@ -1,5 +1,6 @@
+import { Comments } from './../../interfaces/comments';
+import { UserService } from './../../services/user.service';
 import { Post } from './../../interfaces/post';
-import { EnvironmentService } from 'src/app/services/environment.service';
 import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-post.component.css']
 })
 export class CardPostComponent implements OnInit{
-  posts : Array<Post> = []
+
+  posts!: Post []
+  postComments!: Comments []
+
   constructor(
     public postService: PostService,
+    public userService: UserService
   ){
 
   }
@@ -22,6 +27,13 @@ export class CardPostComponent implements OnInit{
   listPosts(){
     this.postService.showPosts().subscribe(data => {
       this.posts = data;
+      console.log(this.posts);
+    })
+  }
+
+  listPostDetail(id: number){
+    this.postService.showPostsComments(id).subscribe(data=>{
+      this.postComments = data
     })
   }
 }

@@ -12,7 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { CardPostComponent } from './components/card-post/card-post.component'
+import { CardPostComponent } from './components/card-post/card-post.component';
+import { CardUserComponent } from './components/card-user/card-user.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CardPostComponent } from './components/card-post/card-post.component'
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    CardPostComponent
+    CardPostComponent,
+    CardUserComponent
   ],
   imports: [
     BrowserModule,
