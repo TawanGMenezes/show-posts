@@ -1,0 +1,65 @@
+<!-- <mat-card>
+  <mat-card-content>Simple card</mat-card-content>
+</mat-card>
+<div class="container">
+  <div class="header"><h1>Detalhes do Usuario</h1> </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput  readonly [value]="data.element.name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>NickName</mat-label>
+      <input matInput  readonly [value]="data.element.usesname">
+    </mat-form-field>
+  </div>
+
+</div> -->
+<mat-card class="container">
+  <div class="close">
+    <a (click)="closeDialog()"><i class="material-icons">close</i></a>
+  </div>
+  <mat-card-header>
+    <mat-card-title>Detalhes do Usuario</mat-card-title>
+  </mat-card-header>
+  <mat-card-subtitle class="header"> Dados</mat-card-subtitle>
+    <form>
+      <td>
+      <mat-form-field>
+        <label>Name</label>
+        <input matInput [value]="data.element.name" readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <label>UserName</label>
+        <input matInput [value]="data.element.username" readonly="true">
+      </mat-form-field>
+    </td>
+      <mat-form-field>
+        <label>Email</label>
+        <input type="email" matInput [value]="data.element.email" readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <label>Phone</label>
+        <input type="phone" matInput [value]="data.element.phone" readonly="true">
+      </mat-form-field>
+      <mat-card-subtitle class="header"> Endereço</mat-card-subtitle>
+      <td>
+      <mat-form-field>
+        <label>Street</label>
+        <input matInput [value]="data.element.address.street" readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <label>Suite</label>
+        <input matInput [value]="data.element.address.suite" readonly="true">
+      </mat-form-field>
+    </td>
+      <mat-form-field>
+        <label>City</label>
+        <input matInput [value]="data.element.address.city" readonly="true">
+      </mat-form-field>
+      <mat-form-field>
+        <label>ZipCode</label>
+        <input  matInput [value]="data.element.address.zipcode" readonly="true">
+      </mat-form-field>
+    </form>
+</mat-card>

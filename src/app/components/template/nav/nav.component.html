@@ -1,12 +1,12 @@
 <mat-sidenav-container class="container">
   <mat-sidenav mode="side" class="sidenav" opened fixedInViewport="true" fixedTopGap="64">
     <mat-nav-list class="nav-list">
-      <a class="list" mat-list-item>
+      <a routerLink="/posts" class="list" mat-list-item>
         <i class="material-icons">
           wysiwyg
         </i><span>Posts</span>
       </a>
-      <a class="list" mat-list-item>
+      <a routerLink="/users" class="list" mat-list-item>
         <i class="material-icons">
           people
         </i>
@@ -15,8 +15,6 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!-- <app-card-user></app-card-user> -->
-    <app-card-post></app-card-post>
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
