@@ -1,5 +1,5 @@
-import { Comments } from './../interfaces/comments';
-import { Post } from './../interfaces/post';
+import { Comments } from '../interfaces/comments.model';
+import { Post } from '../interfaces/post.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { EnvironmentService } from './environment.service';

@@ -1,7 +1,7 @@
 import { CommentsDetailComponent } from './comments-detail/comments-detail.component';
-import { Comments } from './../../interfaces/comments';
+import { Comments } from '../../interfaces/comments.model';
 import { UserService } from './../../services/user.service';
-import { Post } from './../../interfaces/post';
+import { Post } from '../../interfaces/post.model';
 import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';

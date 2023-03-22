@@ -1,6 +1,6 @@
-import { Comments } from './../../../interfaces/comments';
+import { Comments } from '../../../interfaces/comments.model';
 import { MAT_DIALOG_DATA,MatDialogRef } from '@angular/material/dialog';
-import { Post } from './../../../interfaces/post';
+import { Post } from '../../../interfaces/post.model';
 import { Component, OnInit,Inject } from '@angular/core';
 
 @Component({
