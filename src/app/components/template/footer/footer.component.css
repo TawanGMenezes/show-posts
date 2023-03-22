@@ -1,0 +1,19 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+  position: fixed;
+  bottom: 0;
+
+}
+
+.footer span{
+  display: flex;
+  align-items: center;;
+}
+
+.footer span strong{
+  padding-left: 5px;
+}
